@@ -21,7 +21,7 @@ app.use('/api', require('./routes/upload'))
 
 
 // Connect to mongodb
-const URI = process.env.MONGODB_URL
+const URI = process.env.MONGODB_URL || 'http://localhost:3000'
 mongoose.connect(URI, {
     useCreateIndex: true,
     useFindAndModify: false,
